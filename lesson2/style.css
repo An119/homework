@@ -1,0 +1,29 @@
+div,
+span {
+  color: #fff;
+}
+
+.color1 {
+  background: #413e3e;
+}
+
+.text1 {
+  color: #ffc636;
+}
+
+.color2 {
+  background: #ffc636;
+  width: 100px;
+  height: 100px;
+}
+
+.color3 {
+  color: #000;
+  background: #ffa5a5;
+  width: 300px;
+}
+
+.color4 {
+  background: #7d5de6;
+  font-size: 20px;
+}

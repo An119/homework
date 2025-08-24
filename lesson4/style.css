@@ -1,5 +1,5 @@
 a {
-  text-decoration: none;
+  color: #fff;
 }
 
 .header {
@@ -14,6 +14,11 @@ a {
   list-style: none;
 }
 
+.color {
+  color: #000;
+  text-decoration: none;
+}
+
 .quote {
   background: rgb(252, 240, 185);
 }
@@ -22,5 +27,5 @@ a {
   height: 300px;
   background: rgb(122, 51, 255);
   color: #fff;
-  text-decoration: underline;
 }
+

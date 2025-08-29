@@ -1,0 +1,214 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    background: #181E34;
+    color: #fff;
+    line-height: 24px;
+}
+
+.container{
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+/*    Шапка    */
+
+.header{
+    padding: 36px 0 36px;
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+}
+
+.header-nav{
+    margin-left: auto;
+}
+
+.header-list{
+    display: flex;
+}
+
+.header-item{
+    margin-right: 30px;
+}
+
+.header-button{
+    background: #fff;
+    color: #2766ae;
+    font-weight: 500;
+    border-radius: 100px;
+    padding: 14px 30px;
+}
+
+/*    Секция 1    */
+
+.hero{
+    background: url(./../image/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-x: 30%;
+    background-position-y: 50%;
+    padding: 120px 0;
+   
+}
+
+.hero-title{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text{
+    max-width: 436px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.hero-text span{
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #01a2cb;
+    padding-left: 8px;
+}
+
+.hero-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.button-one,
+.button-two{
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 18px 30px;
+    font-weight: 500;
+}
+
+.button-one{
+    background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+}
+
+.button-two{
+    background: linear-gradient(129deg, #00a4cc 0%, #2766ae 100%);
+}
+
+.img-button{
+    margin-left: 4px;
+}
+
+/*    Секция 2    */
+
+.cards{
+    padding: 120px 0;
+}
+
+.cards-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    max-width: 513px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.cards-title{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
+.cards-flex_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px;
+    padding-bottom: 30px;
+}
+
+.cards-flex_item{
+    width: 204px;
+    height: 141px;
+    text-align: center;
+    border: 2px solid #176bae;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 4px 4px 13px 0 rgba(5, 13, 41, 0.76);
+    background: #197cb8;    
+}
+
+.cards-flex_title{
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.cards-button{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 436px;
+    border-radius: 100px;
+    padding: 18px 30px;
+    font-weight: 500;
+    background: linear-gradient(180deg, #00a4cc 0%, #2766ae 100%);
+}
+
+/*    Подвал    */
+
+.footer{
+    border-top: 1px solid #323952;
+    padding: 60px 0;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 811px;
+    gap: 20px;
+}
+
+.footer-desc{
+    width: 267px;
+}
+
+.footer-desc a{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-title{
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-list{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}

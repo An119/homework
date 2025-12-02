@@ -1,0 +1,107 @@
+(function(){
+
+    // ------------------ Бургер-меню ------------------
+
+    document.addEventListener('click', burgerInit)
+
+    function burgerInit(e) {
+
+        const burgerIcon = e.target.closest('.burger-icon')
+        const burgerNavLinl = e.target.closest('.nav__link')
+
+        if(!burgerIcon && !burgerNavLinl) return
+        if(document.documentElement.clientWidth > 900) return //условия, после соблюдения которых запускается нижний скрипт
+        
+        if(!document.body.classList.contains('body--opened-menu')){
+            document.body.classList.add('body--opened-menu')
+        } else{
+            document.body.classList.remove('body--opened-menu')
+        }
+    }
+    
+
+    // ------------------ Модальное окно ------------------
+    const modal = document.querySelector('.modal')
+    const modalButton = document.querySelector('.about__img-btn')
+
+    modalButton.addEventListener('click', openModal)
+    modal.addEventListener('click', closeModal)
+
+    function openModal(e) {
+        e.preventDefault()
+        document.body.classList.toggle('body--opened-modal')
+    }
+
+    function closeModal(e) {
+        e.preventDefault()
+
+        const target = e.target
+
+        if (target.closest('.modal__cancel') || target.classList.contains('modal')) {
+            document.body.classList.remove('body--opened-modal')
+        }
+
+    }
+
+
+    // ------------------ Табы ------------------
+    const tabControls = document.querySelector('.tab-controls')
+
+    tabControls.addEventListener('click', toggleTab)
+
+    function toggleTab(e) {
+
+        const tabControl = e.target.closest('.tab-controls__link')
+
+        if (!tabControl) return
+        e.preventDefault()  
+        if (tabControl.classList.contains('tab-controls__link--active')) return //отменяет запуск нижней функции если кнопка уже активна и описание открыто 
+
+
+        const tabContentID = tabControl.getAttribute('href')
+
+        //перемещает открашивание на активную кнопку (при нажатии на нее)
+        document.querySelector('.tab-controls__link--active').classList.remove('tab-controls__link--active') //отменяет класс
+        tabControl.classList.add('tab-controls__link--active') //добавляет класс
+
+        //открывает описание обучения при нажатии на кнопки(сслыки)
+        document.querySelector('.tab-content--show').classList.remove('tab-content--show') //отменяет класс
+        document.querySelector(tabContentID).classList.add('tab-content--show') //добавляет класс
+    }
+
+    // ------------------ Аккордион ------------------
+
+        //появление контента в развернутом состоянии
+        const accordionLists = document.querySelectorAll('.accordion-list');
+
+        accordionLists.forEach(el => {
+
+        el.addEventListener('click', (e) => {
+
+            //дополнительный функционал, закрытие предыдущего модуля при открытиии другого 
+            // const accordionList = e.currentTarget
+            // const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
+            // const accordionOpenedContent = accordionList.querySelector('.accordion-list__item--opened .accordion-list__content')
+
+            const accordionControl = e.target.closest('.accordion-list__control');
+            if (!accordionControl) return
+            const accordionItem = accordionControl.parentElement;
+            const accordionContent = accordionControl.nextElementSibling;
+
+            // if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
+            //     accordionOpenedItem.classList.remove('accordion-list__item--opened');
+            //     accordionOpenedContent.style.maxHeight = null;
+            // }
+            accordionItem.classList.toggle('accordion-list__item--opened');
+
+            if (accordionItem.classList.contains('accordion-list__item--opened')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = null;
+            }
+
+        });
+
+    });
+
+})()

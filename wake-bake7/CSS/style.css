@@ -904,17 +904,10 @@
   }
 
   .contact__inner {
-    justify-content: space-evenly;
+    align-items: center;
   }
   .contact__text {
     text-align: center;
-  }
-  .contact__img img {
-    object-fit: cover;
-    object-position: -270px;
-    width: 300px;
-    height: 404px;
-    overflow: visible;
   }
   .contact__inner::before {
     /*позиционирование украшений*/
@@ -981,6 +974,22 @@
     width: 60%;
     margin: 0 auto;
   }
+  
+  .contact__inner {
+        justify-content: center;
+    }
+  .contact__img{
+    display: none;
+  }
+.contact__inner::before {/*позиционирование украшений*/
+    top: -15%;
+    left: 0;
+}
+  .contact__inner::after {/*позиционирование украшений*/
+    display: block;
+    top: 11%;
+    right: 0;
+  }
 }
 
 @media (max-width: 785px) {
@@ -1037,27 +1046,16 @@
     max-width: none;
   }
   .program__img,
-  .gallery__img,
-  .contact__img {
+  .gallery__img {
     display: none;
   }
 
   .gallery__inner {
     grid-template-columns: none;
   }
-
-  .contact__inner {
-    justify-content: center;
-  }
-  .contact__inner::before {
-    /*позиционирование украшений*/
+  
+  .contact__inner::before {/*позиционирование украшений*/
     display: none;
-  }
-  .contact__inner::after {
-    /*позиционирование украшений*/
-    display: block;
-    top: 11%;
-    right: 0;
   }
 }
 
@@ -1176,3 +1174,4 @@
     display: none;
   }
 }
+

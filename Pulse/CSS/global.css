@@ -1,0 +1,119 @@
+:root {
+    --font-family: "Oswald", sans-serif;
+    --second-family: "Archivo", sans-serif;
+
+    --general-text: #979797; 
+    --accent-text: #141414; 
+    --title-text: #fff; 
+
+    --general-bg1: #141414;
+    --general-bg2: rgb(225, 225, 225, 100%);
+    --accent-bg: #303030;
+
+    --accent-color:  #f47521;  
+    --border: #7c7c7c; 
+  }
+
+
+
+.body {
+  font-family: "Oswald", "Arial", sans-serif;
+  color: var(--general-text);
+  background: var(--general-bg1);
+  text-transform: uppercase;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+h2{
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 70px;
+  color: var(--title-text);
+}
+
+h4{
+  font-weight: 600;
+  font-size: 42px;
+} 
+
+p{
+  font-family: var(--second-family);
+  text-transform: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.69;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%; /* чтобы был не меньше и не больше экрана */
+  overflow: hidden; /* отсутствие вертикального скролла */
+
+  /* настройки для прилипания шапки и подвала */
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1; /* настройки для прилипания шапки и подвала */
+}
+
+.container {
+  max-width: 1738px; /* +30px из за padding*/
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+
+.tag{
+  font-weight: 600;
+  font-size: 20px;
+  font-family: var(--second-family);
+  letter-spacing: 0.2em;
+  color: var(--accent-color);
+}
+
+.button{
+  position: relative; /* для hover */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 213px;
+  padding: 23px 61px;
+  background: var(--accent-color);
+  color: var(--title-text);
+  transition: color 0.5s linear;
+}
+.button::after{ /* эффект для hover */
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.6s ease 0s; 
+  z-index: -1;
+}
+.button:hover:after{
+  width: 100%;
+}
+
+.general__button{
+  font-family: var(--second-family);
+  color: var(--accent-text);
+  font-weight: 700;
+  width: 100%;
+  max-width: none;
+  line-height: 1.44;
+  letter-spacing: 0.1em;
+  gap: 27px;
+}
+.general__button:hover:after{
+  background: var(--title-text);
+}

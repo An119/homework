@@ -1,0 +1,121 @@
+.footer {
+}
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 63px 0;
+    gap: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.footer__logo {
+}
+.footer__slogan {
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--title-text);
+}
+.footer__slogan::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 75px;
+    height: 75px;
+    left: -35px;
+    top: 7px;
+    border-radius: 50px;
+    background: var(--accent-color);
+}
+
+.footer__body {
+    padding: 102px 0 142px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__col-one {
+}
+.footer__title,
+.socials__title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #a6a6a6;
+}
+
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer__email,
+.footer__tel{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 42px;
+    color: var(--title-text);
+    transition: all 0.3s;
+    text-transform: initial;
+}
+.footer__email:hover,
+.footer__tel:hover{
+    color: var(--accent-color);
+}
+
+.footer__text {
+   font-size: 20px;
+    color: #a6a6a6;
+}
+.socials {
+    display: flex;
+    flex-direction: column;
+    padding-top: 47px;
+    gap: 24px;
+}
+
+.socials__list {
+    display: flex;
+    gap: 45px;
+}
+.socials__item {
+}
+
+.socials__link path{
+    transition: all 0.3s;
+}
+.socials__link:hover path{
+    fill: var(--accent-color);
+}
+
+.footer__col-two {
+    display: flex;
+    gap: 166px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.footer__text-large {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 42px;
+    color: var(--title-text);
+}
+.footer__bottom {
+    padding: 28px 0;
+    background: #303030;
+}
+
+.footer__copy{
+    font-weight: 500;
+    line-height: 1.94;
+}
+.span__copy{
+    font-weight: 700;
+}

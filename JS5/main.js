@@ -44,10 +44,15 @@ function cloneAndModify(object, modifications) {
   return { ...object, ...modifications };
 }
 
-const task2 = cloneAndModify(task);
+const modifications = {
+  isCompleted: true,
+  deadline: 2026
+};
 
-for (const key in task2) {
-  console.log(task2[key]);
+const modifiedTask = cloneAndModify(task, modifications);
+
+for (const key in modifiedTask) {
+  console.log(modifiedTask[key]);
 }
 // ---------------------------------------
 

@@ -5,17 +5,22 @@ export function modalWindow() {
   const modal = document.querySelector('.modal');
   const openBtn = document.querySelector('.product__buy-button');
   const close = document.querySelector('.modal__close');
+  const body = document.body; // Элемент body
 
   // Функция открытия 
   function openModal() {
     modal.classList.add('modal--open');
     modal.querySelector('.modal__window').classList.add('modal__window--open');
+
+    body.classList.add('page__body--no-scroll'); // Убираем прокрутку
   }
 
   // Функция закрытия
   function closeModal() {
     modal.classList.remove('modal--open');
     modal.querySelector('.modal__window').classList.remove('modal__window--open');
+
+    body.classList.remove('page__body--no-scroll'); // Возвращаем прокрутку
   }
 
   openBtn.addEventListener('click', openModal);

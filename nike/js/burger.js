@@ -20,14 +20,14 @@
       iconCross.style.display = 'none'; // Скрываем иконку крестика
       iconMenu.style.display = 'block'; // Показываем иконку меню
 
-     body.classList.remove('page__body--no-scroll'); // Убираем прокрутку
+     body.classList.remove('page__body--no-scroll'); // Возвращаем прокрутку
     
     } else { // Если меню закрыто, то открываем
       menu.classList.add('header__menu--open'); // Добавляем класс
       iconCross.style.display = 'block';            
       iconMenu.style.display = 'none'; 
 
-     body.classList.add('page__body--no-scroll'); // Возвращаем прокрутку
+     body.classList.add('page__body--no-scroll'); // Убираем прокрутку
     }
   }
 

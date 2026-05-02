@@ -7,6 +7,7 @@
   const burgerBtn = document.querySelector('.header__burger'); // Кнопка меню
   const iconMenu = document.querySelector('.burger__icon-menu'); // Иконка меню
   const iconCross = document.querySelector('.burger__icon-cross');  // Иконка закрытия меню
+  const body = document.body; // Элемент body
 
   // Обработчик клика на кнопку
   burgerBtn.addEventListener('click', toggleMenu);
@@ -18,11 +19,15 @@
       menu.classList.remove('header__menu--open'); // Убираем класс  
       iconCross.style.display = 'none'; // Скрываем иконку крестика
       iconMenu.style.display = 'block'; // Показываем иконку меню
+
+     body.classList.remove('page__body--no-scroll'); // Убираем прокрутку
     
     } else { // Если меню закрыто, то открываем
       menu.classList.add('header__menu--open'); // Добавляем класс
       iconCross.style.display = 'block';            
-      iconMenu.style.display = 'none';          
+      iconMenu.style.display = 'none'; 
+
+     body.classList.add('page__body--no-scroll'); // Возвращаем прокрутку
     }
   }
 
